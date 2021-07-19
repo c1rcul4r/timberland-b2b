@@ -1,0 +1,221 @@
+/* TIMBERLAND B2B PLATFORM */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+font-family: Arial,sans-serif;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+.desktop {
+  display: none;
+}
+
+.mobile {
+  display: block;
+}
+
+@media only screen and (min-width:768px) {
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
+
+/* Typography */
+
+h2 {
+  font-family: 'GT Flexa TL' !important;
+  letter-spacing: 0px;
+  font-size: 5.6vw;
+  line-height: 5.6vw;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width:768px) {
+  h2 {
+    font-size: 2.5vw;
+    line-height: 2.5vw;
+    color: #fff;
+  }
+}
+
+/* Image Wrapper */
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vw;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: auto;
+  height: 100%;
+}
+
+@media only screen and (min-width:768px) {
+  .image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .image-wrapper img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+/* Video Wrapper */
+
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-wrapper iframe.mobile {
+  width: 100% !important;
+  height: 125vw !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: all !important;
+  cursor: pointer !important;
+}
+
+.video-wrapper iframe.desktop {
+  width: 100% !important;
+    height: 56.25vw !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: all !important;
+    cursor: pointer !important;
+}
+
+/* Container */
+
+.container-full {
+  width: 100%;
+  height: 125vw;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  float: left;
+}
+
+.container-half {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  float: left;
+}
+
+@media only screen and (min-width:768px) {
+  .container-full {
+    width: 100%;
+    height: 56.25vw;
+  }
+
+  .container-half {
+    width: 50%;
+    height: 40vw;
+  }
+}
+
+/* Content */
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: calc(5vw + 30px);
+  margin-top: 20px;
+}
+
+.content-text-wrapper {
+  z-index: 10000;
+}
+
+@media only screen and (min-width:768px) {
+  .content-wrapper {
+    margin-top: 0;
+    margin-bottom: 5vw;
+  }
+}
+
+/* CTA */
+
+.cta {
+  min-width: 140px;
+  background-color: #000;
+  border: 2px solid #000;
+  color: #fff;
+  padding: 15px 25px;
+  margin: 0px 0px 10px 0px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none !important;
+  display: inline-block;
+  text-align: center;
+  font-family: 'Source Code Pro' !important;
+  letter-spacing: 0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+.cta:before {
+    transition: all 250ms ease-in-out;
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-image: url(https://images.timberland.com/is/content/TimberlandBrand/arrow-butt-);
+    right: -15px;
+    opacity: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.cta:hover:before {
+    right: 8px;
+    opacity: 1;
+}
+
+@media only screen and (min-width:768px) {
+  .cta {
+    min-width: 175px;
+    padding: 20px 30px;
+    margin: 0px 0px 10px 0px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
